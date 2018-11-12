@@ -9,18 +9,18 @@ import CounterButton from '@/components/CounterButton.jsx';
 //#endregion
 
 //#region
-// ReactDOM.render(<div>
-//                     <Counter initCount={0}/>
-//                     {/*<hr/>*/}
-//                     {/*<Counter />*/}
-//                     {/*<hr />*/}
-//                     {/*<Counter initCount="我就是来捣乱的~~~😈" />*/}
-//                 </div>, document.querySelector("#app"));
+ReactDOM.render(<div>
+                    <Counter initCount={0}/>
+                    {/*<hr/>*/}
+                    {/*<Counter />*/}
+                    {/*<hr />*/}
+                    {/*<Counter initCount="我就是来捣乱的~~~😈" />*/}
+                </div>, document.querySelector("#app"));
 //#endregion
 
 //#region
-ReactDOM.render(<div>
-                    <CounterButton color={"red"}>
-                    </CounterButton>
-                </div>, document.getElementById("app"));
+// ReactDOM.render(<div>
+//                     <CounterButton color={"red"}>
+//                     </CounterButton>
+//                 </div>, document.getElementById("app"));
 //#endregion

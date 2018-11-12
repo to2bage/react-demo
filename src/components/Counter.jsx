@@ -44,13 +44,13 @@ class Counter extends Component {
        //#endregion
     }
     shouldComponentUpdate(nextPorps, nextState) {
-        console.log(this.state.count, nextState.count);
+        // console.log(this.state.count, nextState.count);
         return true;
-        // return this.state.count % 2 == 0 ? true : false;
+        // return nextState.count % 2 == 0 ? true : false;
     }
-    // componentWillUpdate () {
+    componentWillUpdate () {
 
-    // }
+    }
     render () {
         return (
             <div>
@@ -67,7 +67,7 @@ class Counter extends Component {
     increatment () {
         this.setState((prevState) => {
             return {
-                count: ++prevState.count
+                count: prevState.count + 1      // 不要用++prevState.count, 此时修改了prevState.count的值, 会影响到shouldComponetUpdate()中的this.state.count的值
             }
         })
     }
