@@ -71,7 +71,7 @@ class LifeOne extends Component {
     render () {
         return (
             <div>
-                <h2>这是生命周期函数测试一</h2>
+                <h2>生命周期函数测试一</h2>
                 <hr/>
                 <h3>演示props属性的默认值: {this.props.msg}</h3>
                 <hr/>
