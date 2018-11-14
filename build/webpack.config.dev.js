@@ -44,7 +44,9 @@ module.exports = {
                     {
                         loader: "css-loader",
                         options: {
-                            sourceMap: true
+                            sourceMap: true,
+                            modules: true,      // switch css module
+                            localIdentName: "[path][name]-[local]-[hash:8]"
                         }
                     },
                     {

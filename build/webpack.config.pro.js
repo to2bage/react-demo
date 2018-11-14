@@ -45,6 +45,13 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     "css-loader",
                     {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            localIdentName: "[path][name]-[local]-[hash:8]"
+                        }
+                    },
+                    {
                         loader: "postcss-loader",
                         options: {
                             ident: "postcss",
