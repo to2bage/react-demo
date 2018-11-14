@@ -35,7 +35,7 @@ class App extends Component {
                             <Menu.Item key="3"><Link to="/about">关于</Link></Menu.Item>
                         </Menu>
                     </Header>
-                    <Content style={{ background: '#fff' }}>
+                    <Content style={{ background: '#fff', flex: 1 }}>
                         <Route path="/home" component={HomeContainer}></Route>
                         <Route path="/about" component={AboutContainer}></Route>
                         <Route path="/movie" component={MovieContainer}></Route>
