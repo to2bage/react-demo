@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+// 项目打包的入口文件
+import React from 'react';
 import ReactDOM from 'react-dom';
+// 导入项目的根组件
+import App from '@/App.jsx';
 
-const divE = React.createElement("div", {}, "你好!世界!!");
-ReactDOM.render(divE, document.querySelector("#app"));
+ReactDOM.render(<App />, document.querySelector("#app"));
