@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import AntOne from '@/components/AntOne.jsx';
+// import { DatePicker } from 'antd';
 
-const divE = React.createElement("div", {}, "你好!世界!!");
-ReactDOM.render(divE, document.querySelector("#app"));
+ReactDOM.render(<AntOne />, document.querySelector("#app"));
