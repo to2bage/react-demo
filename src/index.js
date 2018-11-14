@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import App from '@/App.jsx';
+// import App from '@/App.jsx';
+import TestThree from '@/components/router/TestThree.jsx';
 
-ReactDOM.render(<App />, document.querySelector("#app"));
+ReactDOM.render(<TestThree />, document.querySelector("#app"));
