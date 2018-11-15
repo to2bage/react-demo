@@ -1,7 +1,7 @@
 // 项目的根组件
 import React, { Component } from 'react';
 // 使用路由
-import {HashRouter, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, HashRouter, Route, Link} from 'react-router-dom';
 //  导入所需的ant-design的组件
 import { Layout, Menu } from 'antd';
 const { Header, Content, Footer } = Layout;
@@ -31,14 +31,14 @@ class App extends Component {
                             style={{ lineHeight: '64px' }}
                         >
                             <Menu.Item key="1"><Link to="/home">首页</Link></Menu.Item>
-                            <Menu.Item key="2"><Link to="/movie">电影</Link></Menu.Item>
+                            <Menu.Item key="2"><Link to="/movie/in_threator/1">电影</Link></Menu.Item>
                             <Menu.Item key="3"><Link to="/about">关于</Link></Menu.Item>
                         </Menu>
                     </Header>
                     <Content style={{ background: '#fff', flex: 1 }}>
                         <Route path="/home" component={HomeContainer}></Route>
                         <Route path="/about" component={AboutContainer}></Route>
-                        <Route path="/movie" component={MovieContainer}></Route>
+                        <Route path="/movie/" component={MovieContainer}></Route>
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
                         movie ©2018 Created by Tobage
