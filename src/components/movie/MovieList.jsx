@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// 导入第三方fetch
+import fetchJSONP from 'fetch-jsonp';
+
 // 导入ant-design组件
 import { Spin, Alert } from 'antd';
 
@@ -15,16 +18,11 @@ class MovieList extends Component {
         };
 
         this.renderMovieList = this.renderMovieList.bind(this);
+        this.loadMovieListByTypeAndPage = this.loadMovieListByTypeAndPage.bind(this);
     }
 
     componentWillMount() {
-        setTimeout(() => {
-            this.setState(() => {
-                return {
-                    isLoading: false
-                }
-            })
-        }, 2000);
+        this.loadMovieListByTypeAndPage();
     }
 
     render () {
@@ -57,6 +55,14 @@ class MovieList extends Component {
                 <h1>MovieList加载完成: {this.props.match.params.type} --- {this.props.match.params.page}</h1>
             )
         }
+    }
+
+    loadMovieListByTypeAndPage () {
+        fetchJSONP("http://api.douban.com/v2/movie/in_theaters")
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data);
+        })
     }
 }
 
